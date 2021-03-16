@@ -329,7 +329,7 @@ class Client
     {
         return $this->request(
             'get',
-            $this->baseUrl . $this->apiPrefix . 'carts/' . $quoteId . '/payment-methods',
+            $this->baseUrl . $this->apiPrefix . 'carts/' . $quoteId . '/payment-methods'
         );
     }
 
@@ -451,7 +451,7 @@ class Client
     {
         return $this->request(
             'post',
-            $this->baseUrl . $this->apiPrefix . 'orders/' . $orderId . '/cancel',
+            $this->baseUrl . $this->apiPrefix . 'orders/' . $orderId . '/cancel'
         );
     }
 
@@ -508,7 +508,7 @@ class Client
         try {
             return $this->request(
                 'get',
-                $this->baseUrl . $this->apiPrefix . 'orders/' . $orderId,
+                $this->baseUrl . $this->apiPrefix . 'orders/' . $orderId
             );
         } catch (ClientException $exception) {
             if ($exception->getCode() === 404) {
